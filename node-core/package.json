@@ -1,0 +1,11 @@
+{
+  "name": "js-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entrypoint.js",
+  "scripts": {
+    "start": "node entrypoint.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

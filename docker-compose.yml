@@ -1,0 +1,98 @@
+version: "3"
+services:
+  go-core:
+    image: 127.0.0.1:5000/go-core
+    build:
+      context: ./go-core
+      dockerfile: Dockerfile
+    ports:
+      - "31000:3000"
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 40M
+        reservations:
+          cpus: '0.2'
+          memory: 40M
+  node-core:
+    image: 127.0.0.1:5000/node-core
+    build:
+      context: ./node-core
+      dockerfile: Dockerfile
+    ports:
+      - "30000:3000"
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 40M
+        reservations:
+          cpus: '0.2'
+          memory: 40M
+  node-express:
+    image: 127.0.0.1:5000/node-express
+    build:
+      context: ./node-express
+      dockerfile: Dockerfile
+    ports:
+      - "30001:3000"
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 40M
+        reservations:
+          cpus: '0.2'
+          memory: 49M
+  node-fastify:
+    image: 127.0.0.1:5000/node-fastify
+    build:
+      context: ./node-fastify
+      dockerfile: Dockerfile
+    ports:
+      - "30002:3000"
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 40M
+        reservations:
+          cpus: '0.2'
+          memory: 49M
+  node-koa:
+    image: 127.0.0.1:5000/node-koa
+    build:
+      context: ./node-koa
+      dockerfile: Dockerfile
+    ports:
+      - "30003:3000"
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 40M
+        reservations:
+          cpus: '0.2'
+          memory: 49M
+  node-restify:
+    image: 127.0.0.1:5000/node-restify
+    build:
+      context: ./node-restify
+      dockerfile: Dockerfile
+    ports:
+      - "30004:3000"
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 40M
+        reservations:
+          cpus: '0.2'
+          memory: 49M
