@@ -1,4 +1,4 @@
-# The Great Benchmark
+# Hello Benchmark
 This is a collection of Hello World applications for use with benchmark tests.
 
 ## Get Started
@@ -43,7 +43,7 @@ docker-compose push
 Finally, **run all of them**:
 
 ```bash
-ls -1d */ | cut -f 1 -d '/' | xargs -I@ docker stack deploy --compose-file docker-compose.yml @
+docker stack deploy --compose-file docker-compose.yml hello_benchmark
 ```
 
 ## Testing
